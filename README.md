@@ -1,18 +1,53 @@
-# Salesforce DX Project: Next Steps
+# 🚀 Apex Specialist - Super Badge
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+[![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=flat&logo=salesforce&logoColor=white)](https://trailhead.salesforce.com/)
+[![Apex](https://img.shields.io/badge/Apex-1798C1?style=flat&logo=salesforce&logoColor=white)](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/)
+[![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat)](https://github.com/)
 
-## How Do You Plan to Deploy Your Changes?
+## 📋 Challenge Overview
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+This repository contains the implementation for the **Apex Specialist Super Badge** challenge on Salesforce Trailhead. The project demonstrates advanced Apex development skills including automation, integration, scheduling, and comprehensive testing.
 
-## Configure Your Salesforce DX Project
+## ✅ Progress Tracker
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### 1. 🔄 Automate Record Creation
+- [x] **Status**: Completed ✅
+- **Objective**: Install the unlocked package and configure the development org.
+- **Implementation**: Use the included package content to automatically create a Routine Maintenance request every time a maintenance request of type Repair or Routine Maintenance is updated to Closed. Follow the specifications and naming conventions outlined in the business requirements.
 
-## Read All About It
+### 2. 🔗 Synchronize Salesforce Data with External System
+- [ ] **Status**: Pending 🔄
+- **Objective**: Implement an Apex class called `WarehouseCalloutService`
+- **Implementation**: Create a class that implements the queueable interface and makes a callout to the external service used for warehouse inventory management. This service receives updated values in the external system and updates the related records in Salesforce. Before checking this section, enqueue the job at least once to confirm that it's working as expected.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### 3. ⏰ Schedule Synchronization
+- [ ] **Status**: Pending 🔄
+- **Objective**: Build scheduling logic for daily execution
+- **Implementation**: Build scheduling logic that executes your callout and runs your code daily. The name of the schedulable class should be `WarehouseSyncSchedule`, and the scheduled job should be named `WarehouseSyncScheduleJob`.
+
+### 4. 🧪 Test Automation Logic
+- [ ] **Status**: Pending 🔄
+- **Objective**: Build comprehensive tests with 100% coverage
+- **Implementation**: Build tests for all cases (positive, negative, and bulk) specified in the business requirements by using a class named `MaintenanceRequestHelperTest`. You must have 100% test coverage to pass this section and assert values to prove that your logic is working as expected. Choose Run All Tests in the Developer Console at least once before attempting to submit this section. Be patient as it may take 10-20 seconds to process the challenge check.
+
+### 5. 🌐 Test Callout Logic
+- [ ] **Status**: Pending 🔄
+- **Objective**: Build tests for callout functionality
+- **Implementation**: Build tests for your callout using the included class for the callout mock (`WarehouseCalloutServiceMock`) and callout test class (`WarehouseCalloutServiceTest`) in the package. You must have 100% test coverage to pass this challenge and assert values to prove that your logic is working as expected.
+
+### 6. ⏱️ Test Scheduling Logic
+- [ ] **Status**: Pending 🔄
+- **Objective**: Build unit tests for scheduling
+- **Implementation**: Build unit tests for the class `WarehouseSyncSchedule` in a class named `WarehouseSyncScheduleTest`. You must have 100% test coverage to pass this challenge and assert values to prove that your logic is working as expected.
+
+## 🔗 Useful Links
+
+- [Apex Specialist Super Badge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_apex)
+- [Salesforce Apex Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/)
+- [Testing Best Practices](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.htm)
+
+---
+
+**⭐ Star this repository if it helps you with your Salesforce journey!**
+
+Readme created using AI.
